@@ -11,7 +11,7 @@ sig = Lag(sig) #将该序列向“过去”延迟一天
 #计算收益
 ret = ROC(Cl(GSPC)) * sig
 #去掉其中的NA观测点
-ret = ret(253:1918)
+ret = ret[253:1918]
 
 #library(PerformanceAnalytics)
 table.Drawdowns(ret, top=10)
